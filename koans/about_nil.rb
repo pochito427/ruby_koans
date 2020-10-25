@@ -33,6 +33,7 @@ class AboutNil < Neo::Koan
     # or
     #    obj == nil
     # Why?
+	# ANSWER: It is better to use obj.nil? because the condition has the same boolean value than obj == nil but it is not confused with obj = nil 
   end
 
 end
