@@ -15,6 +15,13 @@
 #
 def triangle(a, b, c)
   # WRITE THIS CODE
+  default = :scalene
+  if a == b and b == c and a == c
+     default = :equilateral
+  elsif a == b or b == c or a == c
+     default = :isosceles
+  end
+  return default  
 end
 
 # Error class used in part 2.  No need to change this code.
