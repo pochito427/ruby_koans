@@ -15,6 +15,17 @@
 #
 def triangle(a, b, c)
   # WRITE THIS CODE
+  
+  #Every side of triangle must be more than zero
+  if a <= 0 or b <= 0 or c <= 0
+     raise TriangleError
+  end
+  
+  #Two times max value among sides of triangle must be less than sum of sides
+  if 2 * [a, b, c].max >= a + b + c
+     raise TriangleError
+  end
+  
   default = :scalene
   if a == b and b == c and a == c
      default = :equilateral
